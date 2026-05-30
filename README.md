@@ -32,7 +32,8 @@ is lower than expected, so we built an AI that helps sort waste at the source.
 ## Files
 
 ```
-source/
+.
+├── README.md
 ├── preprocess.py   # Clean data and prepare images for training
 ├── train.py        # Train the CNN model
 ├── evaluate.py     # Test the model and generate result plots
@@ -63,13 +64,16 @@ Place downloaded files like this:
 
 ```
 project/
-├── source/
+├── README.md
+├── preprocess.py
+├── train.py
+├── evaluate.py
+├── demo.py
 ├── models/best_model.pth
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── split/
-└── README.md
+└── data/
+    ├── raw/
+    ├── processed/
+    └── split/
 ```
 
 ---
@@ -77,10 +81,10 @@ project/
 ## Usage
 
 ```bash
-python3 source/preprocess.py   # optional — data already preprocessed
-python3 source/train.py        # optional — model already trained (~5 min on GPU)
-python3 source/evaluate.py     # requires best_model.pth
-python3 source/demo.py         # requires best_model.pth + webcam
+python3 preprocess.py   # optional — data already preprocessed
+python3 train.py        # optional — model already trained (~5 min on GPU)
+python3 evaluate.py     # requires best_model.pth
+python3 demo.py         # requires best_model.pth + webcam
 ```
 
 ---
